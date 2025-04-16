@@ -1,11 +1,13 @@
 from mcp.server.fastmcp import FastMCP
 
 
-mcp = FastMCP("demo")
-@mcp.tool()
-def add(a: int, b:int) -> int:
-    return a+b
+mcp = FastMCP("AI Sticky Notes")
 
-@mcp.resource("greeting://{name}")
-def get_greeting(name:str) -> str:
-    return f"hello, {name}!"
+NOTES_FILE = "notes.txt"
+
+def ensure_file():
+    if not os.path.exists(NOTES_FILE):
+        with open(NOTES_FILE, "w") as f:
+            f.write("")
+
+@mcp.tool()
