@@ -11,3 +11,10 @@ def ensure_file():
             f.write("")
 
 @mcp.tool()
+
+
+def add_note(message: str) -> str:
+    ensure_file()
+    with open(NOTES_FILE, "a") as f:
+        f.write(message + "\n")
+        return "Note Saved!"
