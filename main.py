@@ -36,3 +36,13 @@ def add_note(message: str) -> str:
 @mcp.tool()
 
 
+def read_notes() ->str:
+    """
+    Read and retur all notes from the sticky note file.
+
+    Return:
+    str: All notes as a single string separated by line breaks.
+    if no notes exists, a default message is returned.
+
+    
+    """
