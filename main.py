@@ -3,7 +3,7 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("AI Sticky Notes")
 
-NOTES_FILE = "notes.txt"
+NOTES_FILE = os.path.join(os.path.dirname(__file__),"notes.txt")
 
 def ensure_file():
     if not os.path.exists(NOTES_FILE):
@@ -14,6 +14,18 @@ def ensure_file():
 
 
 def add_note(message: str) -> str:
+    """
+    Append a new note to the sticky note file.
+
+    Args:
+        message (str): The note content to be added.
+
+    returns:
+        str: Confirmation message indicating the note was saved.
+
+    
+    
+    """
     ensure_file()
     with open(NOTES_FILE, "a") as f:
         f.write(message + "\n")
