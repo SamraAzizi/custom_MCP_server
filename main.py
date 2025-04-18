@@ -58,5 +58,14 @@ def get_latest_note() -> str:
     ensure_file()
     with open(NOTES_FILE, "r") as f:
         lines =f.readlines()
+    return lines[-1].strip() if lines else "No notes yet"
+
+@mcp.prompt()
+
+def note_summary_prompt() -> str:
+    ensure_file()
+    with open(NOTES_FILE, "r") as f:
+        content = f.read().strip()
+
 
     
