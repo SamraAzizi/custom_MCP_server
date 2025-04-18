@@ -66,6 +66,9 @@ def note_summary_prompt() -> str:
     ensure_file()
     with open(NOTES_FILE, "r") as f:
         content = f.read().strip()
+    if not content:
+        return "There are no notes yet."
+    return f"Summarize the current notes: {content}"
 
 
     
