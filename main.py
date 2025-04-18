@@ -68,6 +68,12 @@ def get_latest_note() -> str:
 @mcp.prompt()
 
 def note_summary_prompt() -> str:
+    """
+    Generate a prompt asking the Ai to summarize all the current notes.
+    Returns:
+        str: A propt string that includes all the notes and asks for a asummary
+        if not notes exists, a message will be showm indicating the 
+    """
     ensure_file()
     with open(NOTES_FILE, "r") as f:
         content = f.read().strip()
