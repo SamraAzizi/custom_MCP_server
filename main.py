@@ -46,3 +46,10 @@ def read_notes() ->str:
 
     
     """
+
+    ensure_file()
+    with open(NOTES_FILE, "r") as f:
+        content = f.read().strip()
+    return content or "No notes yet."
+
+@mcp.resource("notes://latest")
