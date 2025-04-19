@@ -26,3 +26,30 @@ AI Sticky Notes is a lightweight, AI-powered note-taking application built using
 ```bash
 git clone https://github.com/yourusername/AI-Sticky-Notes.git
 cd AI-Sticky-Notes
+
+```
+Install Dependencies
+
+Using uv:
+
+```bash
+uv pip install -r requirements.txt
+```
+
+or using pip:
+```bash
+pip install -r requirements.txt
+```
+
+Run the Application
+```bash
+python main.py
+```
+
+## Usage
+The application provides several tools and resources:
+
+### Add a Note
+adds a new note to notes.txt.
+```bash
+
