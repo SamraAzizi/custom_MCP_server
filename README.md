@@ -52,4 +52,29 @@ The application provides several tools and resources:
 ### Add a Note
 adds a new note to notes.txt.
 ```bash
+@mcp.tool()
+def add_note(message: str) -> str:
+    ...
+
+```
+
+## Reads All Notes
+Retrivers all saved notes.
+
+```bash
+@mcp.tool()
+def read_notes() -> str:
+    ...
+
+```
+
+### Get Latest Note
+fetches the most recently added note
+
+```bash
+@mcp.resource("notes://latest")
+def get_latest_note() -> str:
+    ...
+
+```
 
