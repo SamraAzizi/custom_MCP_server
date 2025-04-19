@@ -78,3 +78,14 @@ def get_latest_note() -> str:
 
 ```
 
+## Summarize Notes
+Generates a summary of all current notes using AI
+```bash
+@mcp.prompt()
+def note_summary_prompt() -> str:
+    ...
+
+```
+## AI Integration
+The application integrates with the Claude AI model to provide intelligent summaries of your notes. Ensure that your environment is configured correctly to interact with Claude.
+
