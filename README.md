@@ -9,4 +9,20 @@ AI Sticky Notes is a lightweight, AI-powered note-taking application built using
 - **Latest Note**: Access the most recently added note.
 - **Summarize Notes**: Generate a summary of all current notes using AI.
 
-## 📁 Project Structure
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.8 or higher
+- MCP framework
+- Claude AI model integration
+- uv package manager (optional but recommended)
+
+### Installation
+
+#### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/AI-Sticky-Notes.git
+cd AI-Sticky-Notes
